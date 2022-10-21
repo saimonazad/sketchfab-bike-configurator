@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { formatPrice } from '../../utils';
+import React from "react";
+import PropTypes from "prop-types";
+import { formatPrice } from "../../utils";
 // Styles
-import './Summary.css';
+import "./Summary.css";
 
 /*
  * TODO
@@ -10,29 +10,43 @@ import './Summary.css';
  * Requirements:
  * - use React hooks if needed
  * - use performance optimization if needed
- * 
- */ 
+ *
+ */
 const Summary = ({
   config = null,
   models = null,
-  totalPrice = 0
+  totalPrice = 0,
+  children,
 }) => {
-  const selectedModel = models?.find(model => model?.key === config?.model);
-  const selectedType = selectedModel?.types?.find(type => type.value === config?.car_type);
-  const selectedColor = selectedModel?.colors?.find(color => color.value === config?.color);
-  const selectedWheels = selectedModel?.wheels?.find(wheels => wheels.value === config?.wheels);
-  const selectedInteriorColor = selectedModel?.interiorColors?.find(interiorColor => interiorColor.value === config?.interior_color);
-  const selectedInteriorLayout = selectedModel?.interiorLayouts?.find(interiorLayout => interiorLayout.value === config?.interior_layout);
+  const selectedModel = models?.find((model) => model?.key === config?.model);
+  const selectedType = selectedModel?.types?.find(
+    (type) => type.value === config?.car_type
+  );
+  const selectedColor = selectedModel?.colors?.find(
+    (color) => color.value === config?.color
+  );
+  const selectedWheels = selectedModel?.wheels?.find(
+    (wheels) => wheels.value === config?.wheels
+  );
+  const selectedInteriorColor = selectedModel?.interiorColors?.find(
+    (interiorColor) => interiorColor.value === config?.interior_color
+  );
+  const selectedInteriorLayout = selectedModel?.interiorLayouts?.find(
+    (interiorLayout) => interiorLayout.value === config?.interior_layout
+  );
 
   return (
     <div className="summary">
+      {children}
       <h1>Your {selectedModel?.name}</h1>
       <p className="summary-edd">Estimated delivery: 5-9 weeks</p>
       <div className="summary-content">
         <p>Summary</p>
         <ul>
           <li>
-            <span>{selectedModel?.name} {selectedType?.label}</span>
+            <span>
+              {selectedModel?.name} {selectedType?.label}
+            </span>
             <span>{formatPrice(selectedType?.price)}</span>
           </li>
           <li>
@@ -64,7 +78,7 @@ const Summary = ({
 Summary.propTypes = {
   config: PropTypes.object,
   models: PropTypes.array,
-  totalPrice: PropTypes.number
+  totalPrice: PropTypes.number,
 };
 
 export default Summary;

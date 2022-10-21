@@ -18,7 +18,7 @@
   width: 100%;
   box-sizing: border-box;
   text-transform: capitalize;
-  transition: all .25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .text-option > span:first-child {
   overflow: hidden;
@@ -38,7 +38,7 @@
   margin-right: 12px;
   margin-bottom: 12px;
   border-radius: 12px;
-  background: var(--theme-surface);;
+  background: var(--theme-surface);
   border: 2px solid var(--theme-surface-border);
   box-sizing: border-box;
   display: flex;
@@ -77,67 +77,52 @@
 .color-option > div.white {
   background: white;
 }
-.color-option > div.black {
+.color-option > div.green-orange {
   background: linear-gradient(
     to bottom right,
-    hsl(0, 0%, 100%) 0%,
-    hsl(0, 0%, 98.73%) 0.3%,
-    hsl(0, 0%, 95.14%) 1.4%,
-    hsl(0, 0%, 89.6%) 3.2%,
-    hsl(0, 0%, 82.46%) 5.8%,
-    hsl(0, 0%, 74.07%) 9.3%,
-    hsl(0, 0%, 64.8%) 13.6%,
-    hsl(0, 0%, 54.99%) 18.9%,
-    hsl(0, 0%, 45.01%) 25.1%,
-    hsl(0, 0%, 35.2%) 32.4%,
-    hsl(0, 0%, 25.93%) 40.7%,
-    hsl(0, 0%, 17.54%) 50.2%,
-    hsl(0, 0%, 10.4%) 60.8%,
-    hsl(0, 0%, 4.86%) 72.6%,
-    hsl(0, 0%, 1.27%) 85.7%,
-    hsl(0, 0%, 0%) 100%
+    rgb(23, 101, 193) 0%,
+    46.3593%,
+    rgb(167, 191, 30) 56.0557%,
+    81.1361%,
+    rgb(49, 72, 99) 100%
   );
 }
-.color-option > div.silver {
+.color-option > div.yellow-blue {
   background: linear-gradient(
     to bottom right,
-    hsl(0, 0%, 100%) 0%,
-    hsl(208.97, 6.61%, 98.9%) 0.3%,
-    hsl(208.97, 6.61%, 95.82%) 1.4%,
-    hsl(208.97, 6.61%, 91.05%) 3.2%,
-    hsl(208.97, 6.61%, 84.9%) 5.8%,
-    hsl(208.97, 6.61%, 77.68%) 9.3%,
-    hsl(208.97, 6.61%, 69.7%) 13.6%,
-    hsl(208.97, 6.61%, 61.26%) 18.9%,
-    hsl(208.97, 6.61%, 52.66%) 25.1%,
-    hsl(208.97, 8.33%, 44.22%) 32.4%,
-    hsl(208.97, 11.62%, 36.24%) 40.7%,
-    hsl(208.97, 16.16%, 29.02%) 50.2%,
-    hsl(208.97, 22.27%, 22.87%) 60.8%,
-    hsl(208.97, 29.88%, 18.1%) 72.6%,
-    hsl(208.97, 37.38%, 15.02%) 85.7%,
-    hsl(208.97, 40.85%, 13.92%) 100%
+    rgb(36, 36, 36) 0%,
+    9.86066%,
+    rgb(55, 55, 55) 19.7213%,
+    24.1158%,
+    rgb(232, 232, 232) 28.5102%,
+    32.9059%,
+    rgb(78, 78, 78) 37.3016%,
+    39.2857%,
+    rgb(53, 53, 53) 41.2698%,
+    43.8492%,
+    rgb(238, 238, 238) 46.4286%,
+    48.0159%,
+    rgb(158, 158, 158) 49.6032%,
+    51.8112%,
+    rgb(51, 51, 51) 54.0193%,
+    63.7192%,
+    rgb(59, 59, 59) 73.4191%,
+    78.7781%,
+    rgb(176, 27, 33) 84.1372%,
+    92.0686%,
+    rgb(61, 61, 61) 100%
   );
 }
-.color-option > div.blue {
+.color-option > div.red-purple {
   background: linear-gradient(
     to bottom right,
-    hsl(0, 0%, 100%) 0%,
-    hsl(222.86, 49.12%, 99.15%) 0.3%,
-    hsl(222.86, 49.12%, 96.74%) 1.4%,
-    hsl(222.86, 49.12%, 93.03%) 3.2%,
-    hsl(222.86, 49.12%, 88.24%) 5.8%,
-    hsl(222.86, 49.12%, 82.61%) 9.3%,
-    hsl(222.86, 49.12%, 76.4%) 13.6%,
-    hsl(222.86, 49.12%, 69.82%) 18.9%,
-    hsl(222.86, 49.12%, 63.12%) 25.1%,
-    hsl(222.86, 49.12%, 56.55%) 32.4%,
-    hsl(222.86, 49.12%, 50.33%) 40.7%,
-    hsl(222.86, 60.76%, 44.7%) 50.2%,
-    hsl(222.86, 73.94%, 39.92%) 60.8%,
-    hsl(222.86, 86.58%, 36.2%) 72.6%,
-    hsl(222.86, 96.23%, 33.8%) 85.7%,
-    hsl(222.86, 100%, 32.94%) 100%
+    rgb(224, 25, 25) 0%,
+    41.0677%,
+    rgb(51, 51, 51) 59.6999%,
+    71.1198%,
+    rgb(232, 232, 232) 82.5397%,
+    91.2698%,
+    rgb(64, 64, 64) 100%
   );
 }
 .color-option > div.red {
@@ -162,7 +147,7 @@
   );
 }
 
-@media(min-width: 576px) {
+@media (min-width: 576px) {
   .color-option {
     width: 65px;
     height: 65px;
@@ -172,7 +157,7 @@
     height: 100px;
   }
 }
-@media(min-width: 992px) {
+@media (min-width: 992px) {
   .text-option {
     max-width: 300px;
   }

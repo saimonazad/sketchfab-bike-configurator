@@ -1,14 +1,31 @@
 export const colors = [
-  { label: "Pearl White Multi-Coat", value: "white", price: 0 },
-  { label: "Solid Black", value: "black", price: 1500 },
-  { label: "Midnight Silver Metallic", value: "silver", price: 1500 },
-  { label: "Deep Blue Metallic", value: "blue", price: 1500 },
-  { label: "Red Multi-Coat", value: "red", price: 2500 }
+  {
+    label: "Color: Green Orange",
+    value: "green-orange",
+    price: 0,
+    texture: "texture-green-orange",
+  },
+  {
+    label: "Color: Yellow Blue",
+    value: "yellow-blue",
+    price: 1500,
+    texture: "texture-yellow-blue",
+  },
+  {
+    label: "Color: Red Purple",
+    value: "red-purple",
+    price: 1500,
+    texture: "texture-red-purple",
+  },
 ];
 
 export const interiorColors = [
   { label: "All black Figured Ash Wood Décor", value: "all_black", price: 0 },
-  { label: "Black and white Dark Ash Wood Décor", value: "black_and_white", price: 1500 },
+  {
+    label: "Black and white Dark Ash Wood Décor",
+    value: "black_and_white",
+    price: 1500,
+  },
   { label: "Cream Oak Wood Décor", value: "cream", price: 1500 },
 ];
 
@@ -20,33 +37,39 @@ export const interiorLayouts = [
 
 export const models = [
   {
-    key: 's',
-    name: "Model S",
+    key: "s",
+    name: "New Gixxer SF Carb-Disk",
     colors: colors,
     wheels: [
       {
         src: `${process.env.PUBLIC_URL}/wheels/model_s/model_s_wheel_1.png`,
         label: '19" Tempest Wheels',
         value: "wheel_1",
-        price: 0
+        price: 0,
       },
       {
         src: `${process.env.PUBLIC_URL}/wheels/model_s/model_s_wheel_2.png`,
         label: '21" Sonic Carbon Twin Turbine Wheels',
         value: "wheel_2",
-        price: 4500
-      }
+        price: 4500,
+      },
+      {
+        src: `${process.env.PUBLIC_URL}/wheels/model_s/model_s_wheel_2.png`,
+        label: '21" Sonic Carbon Twin Turbine Wheels',
+        value: "wheel_3",
+        price: 4800,
+      },
     ],
     types: [
       {
-        label: "Long Range Plus",
-        value: "long_range_plus",
+        label: "",
+        value: "",
         specs: {
           range: 402,
-          top_speed: 155,
-          acceleration_time: 3.7,
+          top_speed: 125,
+          acceleration_time: 15.8,
         },
-        price: 69420
+        price: 69420,
       },
       {
         label: "Performance",
@@ -61,8 +84,8 @@ export const models = [
           "Quicker acceleration: 0-60 mph in 2.3s",
           "Ludicrous Mode",
           "Enhanced Interior Styling",
-          "Carbon fiber spoiler"
-        ]
+          "Carbon fiber spoiler",
+        ],
       },
       {
         label: "Plaid",
@@ -78,134 +101,134 @@ export const models = [
           "Acceleration from 0-60 mph: <2.0s",
           "Quarter mile: <9.0s",
           "1,100+ horsepower",
-          "Tri Motor All-Wheel Drive"
-        ]
+          "Tri Motor All-Wheel Drive",
+        ],
       },
-    ],
-    interiorColors: interiorColors
-  },
-  {
-    key: 'x',
-    name: "Model X",
-    colors: colors,
-    wheels: [
-      {
-        src: `${process.env.PUBLIC_URL}/wheels/model_x/model_x_wheel_1.png`,
-        label: '20" Silver Wheels',
-        value: "wheel_1",
-        price: 0
-      },
-      {
-        src: `${process.env.PUBLIC_URL}/wheels/model_x/model_x_wheel_2.png`,
-        label: '22" Onyx Black Wheels',
-        value: "wheel_2",
-        price: 5500
-      }
-    ],
-    types: [
-      {
-        label: "Long Range Plus",
-        value: "long_range_plus",
-        specs: {
-          range: 371,
-          top_speed: 155,
-          acceleration_time: 4.4
-        },
-        price: 79900
-      },
-      {
-        label: "Performance",
-        value: "performance",
-        specs: {
-          range: 341,
-          top_speed: 163,
-          acceleration_time: 2.6
-        },
-        price: 99990,
-        benefits: [
-          "Quicker acceleration: 0-60 mph in 2.6s",
-          "Ludicrous Mode",
-          "Enhanced Interior Styling"
-        ]
-      }
     ],
     interiorColors: interiorColors,
-    interiorLayouts: interiorLayouts
   },
-  {
-    key: 'y',
-    name: "Model Y",
-    colors: colors,
-    wheels: [
-      {
-        src: `${process.env.PUBLIC_URL}/wheels/model_y/model_y_wheel_1.png`,
-        label: '19’’ Gemini Wheels',
-        value: "wheel_1",
-        price: 0
-      },
-      {
-        src: `${process.env.PUBLIC_URL}/wheels/model_y/model_y_wheel_2.png`,
-        label: '20’’ Induction Wheels',
-        value: "wheel_2",
-        price: 2000
-      }
-    ],
-    types: [
-      {
-        label: "Long Range",
-        value: "long_range",
-        specs: {
-          range: 326,
-          top_speed: 135,
-          acceleration_time: 4.8
-        },
-        price: 45690
-      },
-      {
-        label: "Performance",
-        value: "performance",
-        specs: {
-          range: 303,
-          top_speed: 155,
-          acceleration_time: 3.5
-        },
-        price: 55690,
-        benefits: [
-          "Increased top speed from 135mph to 155mph",
-          "21’’ Überturbine Wheels",
-          "Performance Brakes",
-          "Lowered suspension",
-          "Aluminum alloy pedals"
-        ]
-      }
-    ],
-    interiorColors: interiorColors.slice(0,2),
-    interiorLayouts: [interiorLayouts[0], interiorLayouts[2]]
-  }
+  // {
+  //   key: 'x',
+  //   name: "Model X",
+  //   colors: colors,
+  //   wheels: [
+  //     {
+  //       src: `${process.env.PUBLIC_URL}/wheels/model_x/model_x_wheel_1.png`,
+  //       label: '20" Silver Wheels',
+  //       value: "wheel_1",
+  //       price: 0
+  //     },
+  //     {
+  //       src: `${process.env.PUBLIC_URL}/wheels/model_x/model_x_wheel_2.png`,
+  //       label: '22" Onyx Black Wheels',
+  //       value: "wheel_2",
+  //       price: 5500
+  //     }
+  //   ],
+  //   types: [
+  //     {
+  //       label: "Long Range Plus",
+  //       value: "long_range_plus",
+  //       specs: {
+  //         range: 371,
+  //         top_speed: 155,
+  //         acceleration_time: 4.4
+  //       },
+  //       price: 79900
+  //     },
+  //     {
+  //       label: "Performance",
+  //       value: "performance",
+  //       specs: {
+  //         range: 341,
+  //         top_speed: 163,
+  //         acceleration_time: 2.6
+  //       },
+  //       price: 99990,
+  //       benefits: [
+  //         "Quicker acceleration: 0-60 mph in 2.6s",
+  //         "Ludicrous Mode",
+  //         "Enhanced Interior Styling"
+  //       ]
+  //     }
+  //   ],
+  //   interiorColors: interiorColors,
+  //   interiorLayouts: interiorLayouts
+  // },
+  // {
+  //   key: 'y',
+  //   name: "Model Y",
+  //   colors: colors,
+  //   wheels: [
+  //     {
+  //       src: `${process.env.PUBLIC_URL}/wheels/model_y/model_y_wheel_1.png`,
+  //       label: '19’’ Gemini Wheels',
+  //       value: "wheel_1",
+  //       price: 0
+  //     },
+  //     {
+  //       src: `${process.env.PUBLIC_URL}/wheels/model_y/model_y_wheel_2.png`,
+  //       label: '20’’ Induction Wheels',
+  //       value: "wheel_2",
+  //       price: 2000
+  //     }
+  //   ],
+  //   types: [
+  //     {
+  //       label: "Long Range",
+  //       value: "long_range",
+  //       specs: {
+  //         range: 326,
+  //         top_speed: 135,
+  //         acceleration_time: 4.8
+  //       },
+  //       price: 45690
+  //     },
+  //     {
+  //       label: "Performance",
+  //       value: "performance",
+  //       specs: {
+  //         range: 303,
+  //         top_speed: 155,
+  //         acceleration_time: 3.5
+  //       },
+  //       price: 55690,
+  //       benefits: [
+  //         "Increased top speed from 135mph to 155mph",
+  //         "21’’ Überturbine Wheels",
+  //         "Performance Brakes",
+  //         "Lowered suspension",
+  //         "Aluminum alloy pedals"
+  //       ]
+  //     }
+  //   ],
+  //   interiorColors: interiorColors.slice(0,2),
+  //   interiorLayouts: [interiorLayouts[0], interiorLayouts[2]]
+  // }
 ];
 
 export const initialConfig = {
-  's': {
-    car_type: "long_range_plus",
+  s: {
+    car_type: "",
     model: "s",
-    color: "white",
-    wheels: "wheel_1",
-    interior_color: "all_black"
+    color: "green-orange",
+    // wheels: "wheel_1",
+    // interior_color: "all_black",
   },
-  'x': {
+  x: {
     car_type: "long_range_plus",
     model: "x",
     color: "white",
     wheels: "wheel_1",
     interior_color: "all_black",
-    interior_layout: "five_seat"
+    interior_layout: "five_seat",
   },
-  'y': {
+  y: {
     car_type: "long_range",
     model: "y",
     color: "white",
     wheels: "wheel_1",
     interior_color: "all_black",
-    interior_layout: "five_seat"
-  }
+    interior_layout: "five_seat",
+  },
 };

@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 // Styles
-import './Option.css';
+import "./Option.css";
 
 const types = ["text", "color", "image"];
 
@@ -11,26 +11,26 @@ const types = ["text", "color", "image"];
  * Tips:
  * - Wrap the Option component by using the React.memo HoC
  * - Don't forget to use the useCallback hook to wrap any event handlers/callbacks form the parent component
- * 
- */ 
+ *
+ */
 const Option = ({
-  value = '',
-  label = '',
-  src = '',
-  type = '',
-  price = '',
+  value = "",
+  label = "",
+  src = "",
+  type = "",
+  price = "",
   active = false,
-  onSelectOption = () => null
+  onSelectOption = () => null,
 }) => {
   if (!types.includes(type)) return null;
 
   let classNames = `option ${type}-option`;
   if (active) {
-    classNames += ' active';
+    classNames += " active";
   }
 
   const renderContent = () => {
-    switch(type) {
+    switch (type) {
       case "text":
         return (
           <>
@@ -41,11 +41,11 @@ const Option = ({
       case "image":
         return <img src={src} alt={label} title={label} />;
       case "color":
-        return <div className={value} title={label} />;
+        return <div className={value} title={label} id={value} />;
       default:
         return null;
     }
-  }
+  };
 
   return (
     <div
@@ -64,7 +64,7 @@ Option.propTypes = {
   type: PropTypes.oneOf(types),
   price: PropTypes.string,
   active: PropTypes.bool,
-  onSelectOption: PropTypes.func
+  onSelectOption: PropTypes.func,
 };
 
 export default Option;

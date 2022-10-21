@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import './Preview.css';
 // Components
 import Slideshow from '../Slideshow';
-
+import client from "@sketchfab/viewer-api";
+import SketchfabGUI from './Sketchfab';
 /*
  * TODO: Refactor Preview as a functional component
  *
@@ -62,14 +63,16 @@ class Preview extends React.Component {
   render() {
     return (
       <div className="preview">
-        <Slideshow
+        <SketchfabGUI props={this.props} />
+        {/* <Slideshow
           items={this.items}
           index={this.index}
           showPrev={this.props.showAllModels}
           showNext={this.props.showAllModels}
           onClickPrev={this.handleOnClickPrev}
           onClickNext={this.handleOnClickNext}
-        />
+        /> */}
+        
         {
           this.props.showSpecs ? (
             <ul className="specs">
@@ -83,7 +86,7 @@ class Preview extends React.Component {
               </li>
               <li>
                 <span className="specs-value">{this.specs?.acceleration_time ?? ' - '}s</span>
-                <span className="specs-label">0-60 mph</span>
+                <span className="specs-label">0-100 kmph</span>
               </li>
             </ul>
           ) : null

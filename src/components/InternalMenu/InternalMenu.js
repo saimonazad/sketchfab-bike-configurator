@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 // Styles
-import "./Menu.css";
+import "./InternalMenu.css";
 // Icons
-import { FaMoon, FaSun } from "react-icons/fa";
+import { FaMoon, FaSun } from 'react-icons/fa';
 
 /*
  * TODO: Refactor Menu as a functional component
@@ -15,13 +15,13 @@ import { FaMoon, FaSun } from "react-icons/fa";
  * - Menu logic and behavior should remain the same
  *
  */
-class Menu extends React.Component {
+class InternalMenu extends React.Component {
   state = {
-    darkMode: false,
+    darkMode: true,
   };
 
   handleOnChangeMode = () => {
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       ...prevState,
       darkMode: !prevState.darkMode,
     }));
@@ -35,12 +35,9 @@ class Menu extends React.Component {
       : `${process.env.PUBLIC_URL}/logo.svg`;
 
     return (
-      <div className="menu-container">
-        <a href="https://dreamerzlab.com/" target="__blank" className="logo">
-          {/* <img src={brandLogo} alt="AlterClass" /> */}
-          CONFIGURATOR
-        </a>
-        {/* <ul className="menu-nav">
+      <div className="internal-menu-container">
+        
+        <ul className="internal-menu-nav">
           {this.props.items.map((item, i) => (
             <li
               key={item}
@@ -50,17 +47,16 @@ class Menu extends React.Component {
               <h2>{item}</h2>
             </li>
           ))}
-        </ul> */}
-        {/* <ModeIcon className="mode-icon" onClick={this.handleOnChangeMode} /> */}
+        </ul>
       </div>
     );
   }
 }
 
-Menu.propTypes = {
+InternalMenu.propTypes = {
   items: PropTypes.arrayOf(PropTypes.string),
   selectedItem: PropTypes.number,
   onSelectItem: PropTypes.func,
 };
 
-export default Menu;
+export default InternalMenu;

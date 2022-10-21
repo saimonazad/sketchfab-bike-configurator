@@ -3,7 +3,9 @@
   box-sizing: border-box;
   text-align: center;
 }
-
+/* .settings .internal-menu-container {
+    padding: 0px!important;
+  } */
 .settings-group {
   max-width: 450px;
   margin: 0 auto;
@@ -65,10 +67,10 @@
   text-align: left;
 }
 .settings-group-benefits > ul > li {
-  margin-bottom: .6em;
+  margin-bottom: 0.6em;
 }
 
-@media(min-width: 992px) {
+@media (min-width: 992px) {
   .settings {
     flex: 1;
     overflow-y: auto;
@@ -76,6 +78,7 @@
     padding: 48px;
     text-align: left;
   }
+  
   .settings-group-label {
     justify-content: space-between;
   }
