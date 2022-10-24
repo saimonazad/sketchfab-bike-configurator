@@ -30,15 +30,13 @@ class Menu extends React.Component {
   render() {
     const ModeIcon = this.state.darkMode ? FaSun : FaMoon;
 
-    const brandLogo = this.state.darkMode
-      ? `${process.env.PUBLIC_URL}/logo_white.svg`
-      : `${process.env.PUBLIC_URL}/logo.svg`;
-
     return (
       <div className="menu-container">
         <a href="https://dreamerzlab.com/" target="__blank" className="logo">
-          {/* <img src={brandLogo} alt="AlterClass" /> */}
-          CONFIGURATOR
+          <img
+            src={`${process.env.PUBLIC_URL}/dlabLogo.png`}
+            alt="DreamerzLab"
+          />
         </a>
         {/* <ul className="menu-nav">
           {this.props.items.map((item, i) => (

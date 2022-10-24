@@ -93,27 +93,26 @@ export default function SketchfabGUI({ props }) {
                     api.addTexture(textures[texture].url, (err, uid) => {
                       if (!err) {
                         textures[texture].uid = uid;
-                        
                       }
                     });
                   }
                 });
 
-                document
-                  .getElementById("play")
-                  .addEventListener("click", function () {
-                    api.play();
-                  });
-                document
-                  .getElementById("pause")
-                  .addEventListener("click", function () {
-                    api.pause();
-                  });
-                document
-                  .getElementById("pingpong")
-                  .addEventListener("click", function () {
-                    pingpong = !pingpong;
-                  });
+                // document
+                //   .getElementById("play")
+                //   .addEventListener("click", function () {
+                //     api.play();
+                //   });
+                // document
+                //   .getElementById("pause")
+                //   .addEventListener("click", function () {
+                //     api.pause();
+                //   });
+                // document
+                //   .getElementById("pingpong")
+                //   .addEventListener("click", function () {
+                //     pingpong = !pingpong;
+                //   });
 
                 document
                   .getElementById("previous")
@@ -183,13 +182,15 @@ export default function SketchfabGUI({ props }) {
     if (apiSkfb != null) {
       try {
         apiSkfb.getMaterialList((err, materials) => {
-          let materialToUpdate = materials[5];
-          materialToUpdate.channels.AlbedoPBR.texture.uid =
-            textures[props?.config?.color].uid;
-          materialToUpdate.channels.AlbedoPBR.enable = true;
-          apiSkfb.setMaterial(materialToUpdate, () => {
-            // console.log("Updated material.");
-          });
+          if (materials?.length > 0) {
+            let materialToUpdate = materials[5];
+            materialToUpdate.channels.AlbedoPBR.texture.uid =
+              textures[props?.config?.color].uid;
+            materialToUpdate.channels.AlbedoPBR.enable = true;
+            apiSkfb.setMaterial(materialToUpdate, () => {
+              // console.log("Updated material.");
+            });
+          }
         });
       } catch (error) {
         const mute = error;
