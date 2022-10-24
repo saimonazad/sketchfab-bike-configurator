@@ -50,7 +50,7 @@ const Summary = ({
             <span>{formatPrice(selectedType?.price)}</span>
           </li>
           <li>
-            <span>{selectedColor?.label}</span>
+            <span>Color: {selectedColor?.label}</span>
             <span>{formatPrice(selectedColor?.price)}</span>
           </li>
           <li>

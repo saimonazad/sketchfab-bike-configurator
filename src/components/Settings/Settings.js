@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { formatPrice } from "../../utils";
+import Switch from "react-switch";
+
 // Styles
 import "./Settings.css";
 // Components
@@ -20,6 +22,8 @@ const Settings = ({
   settings = null,
   onSelectOption = () => null,
   children,
+  handleChangeAnimation = () => null,
+  checked,
 }) => {
   const selectedOptions = settings?.reduce(
     (acc, setting) => ({
@@ -31,9 +35,32 @@ const Settings = ({
     }),
     {}
   );
-
+  // const [checked, setChecked] = useState(true);
+  // const handleChange = (value) => {
+  //   console.log("value", value);
+  //   if (checked) {
+  //   }
+  //   setChecked(!checked);
+  // };
   return (
     <div className="settings">
+      <label className="checkbox">
+        <span>Rotate Animation</span>
+        <Switch
+          onChange={handleChangeAnimation}
+          checked={checked}
+          uncheckedIcon={false}
+          checkedIcon={false}
+          handleDiameter={18}
+          offColor="#fff"
+          onColor="#fff"
+          offHandleColor="#C33364"
+          onHandleColor="#C33364"
+          height={25}
+          width={54}
+          borderRadius={20}
+        />
+      </label>
       {children}
       {settings?.map((setting) => {
         if (!setting.options || setting.options.length === 0) {

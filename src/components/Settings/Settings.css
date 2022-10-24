@@ -70,6 +70,24 @@
   margin-bottom: 0.6em;
 }
 
+.react-switch-bg {
+  border: 2px solid #c33364;
+}
+.react-switch-handle {
+  top: 5.5px !important;
+  left: 4px !important;
+}
+.checkbox {
+  right: 10px;
+  display: flex;
+  align-items: center;
+  place-content: center;
+  margin-bottom: 50px;
+}
+.checkbox span {
+  margin-right: 5px;
+}
+
 @media (min-width: 992px) {
   .settings {
     flex: 1;
@@ -78,7 +96,7 @@
     padding: 48px;
     text-align: left;
   }
-  
+
   .settings-group-label {
     justify-content: space-between;
   }
@@ -88,5 +106,8 @@
   .settings-options .settings-options-text {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  .checkbox {
+    place-content: end;
   }
 }

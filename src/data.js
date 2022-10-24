@@ -1,18 +1,18 @@
 export const colors = [
   {
-    label: "Color: Green Orange",
+    label: "Blue",
     value: "green-orange",
     price: 0,
     texture: "texture-green-orange",
   },
   {
-    label: "Color: Yellow Blue",
+    label: "Black",
     value: "yellow-blue",
     price: 1500,
     texture: "texture-yellow-blue",
   },
   {
-    label: "Color: Red Purple",
+    label: "Red",
     value: "red-purple",
     price: 1500,
     texture: "texture-red-purple",

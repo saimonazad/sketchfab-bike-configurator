@@ -26,6 +26,7 @@ class App extends React.Component {
   state = {
     currentStep: 0,
     config: initialConfig?.["s"] ?? null,
+    checked: true,
   };
 
   get selectedModel() {
@@ -170,6 +171,9 @@ class App extends React.Component {
   handleChangeModel = (model) => {
     this.setState({ config: initialConfig[model] });
   };
+  handleChangeAnimation = (value) => {
+    this.setState({ checked: value });
+  };
 
   handleOnSelectOption = (prop, value) => {
     if (prop === "model") {
@@ -210,6 +214,8 @@ class App extends React.Component {
               showAllModels={isFirstStep}
               showSpecs={true}
               onChangeModel={this.handleChangeModel}
+              handleChangeAnimation={this.handleChangeAnimation}
+              checked={this.state.checked}
             />
           )}
           {isLastStep ? (
@@ -229,6 +235,8 @@ class App extends React.Component {
               config={this.state.config}
               settings={this.steps[this.state.currentStep].settings}
               onSelectOption={this.handleOnSelectOption}
+              handleChangeAnimation={this.handleChangeAnimation}
+              checked={this.state.checked}
             >
               <InternalMenu
                 items={this.steps.map((step) => step.name)}
