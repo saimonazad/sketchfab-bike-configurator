@@ -1,11 +1,16 @@
 .modelViewer {
   display: flex;
   flex-direction: column;
-  height: 450px;
+  height: 350px;
   width: 100%;
 }
 iframe {
   position: unset !important;
+}
+@media (min-width: 768px) {
+  .modelViewer {
+    height: 450px;
+  }
 }
 @media (min-width: 992px) {
   .modelViewer {

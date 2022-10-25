@@ -20,6 +20,7 @@
   justify-content: center;
   align-items: flex-start;
   box-sizing: border-box;
+  display: none;
 }
 .specs > li:not(:last-child) {
   border-right: 1px solid var(--theme-separator);
@@ -44,15 +45,18 @@
   padding-top: 8px;
 }
 
-@media(min-width: 576px) {
+@media (min-width: 576px) {
   .specs > li {
     padding: 0 32px;
   }
   .specs > li > span.specs-value {
     font-size: 2.5rem;
   }
+  .specs {
+    display: flex;
+  }
 }
-@media(min-width: 992px) {
+@media (min-width: 992px) {
   .preview {
     flex: 4;
     border-right: 1px solid var(--theme-separator);

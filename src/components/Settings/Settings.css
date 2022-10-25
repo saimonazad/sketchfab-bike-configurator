@@ -1,7 +1,9 @@
 .settings {
-  padding: 32px;
+  /* padding: 32px; */
   box-sizing: border-box;
   text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
 }
 /* .settings .internal-menu-container {
     padding: 0px!important;
@@ -95,6 +97,7 @@
     min-width: 435px;
     padding: 48px;
     text-align: left;
+    display: unset;
   }
 
   .settings-group-label {
